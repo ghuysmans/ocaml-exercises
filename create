@@ -1,0 +1,18 @@
+#!/bin/sh
+set -e
+
+if [ "$#" -ne 1 -o -z "$1" ]; then
+	echo usage: $0 ex >&2
+	echo Creates a new exercise \'ex\' >&2
+	exit 1
+fi
+
+
+[ ! -e "$1.ml" ] && cp french.ml $1.ml
+[ ! -e "$1.mli" ] && cp french.mli $1.mli
+[ ! -e "$1_test.ml" ] && cp french_test.ml $1_test.ml
+if ! grep "^<$1_test\.\*>" _tags; then
+	echo "<$1_test.*>: ppx-driver(ppx_inline_test -inline-test-lib $1)" >>_tags
+fi
+
+echo Edit your files, then run \'make $1.test\'
