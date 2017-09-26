@@ -3,3 +3,4 @@
 <french_test.*>: ppx-driver(ppx_inline_test -inline-test-lib french)
 <palindrome_test.*>: ppx-driver(ppx_inline_test -inline-test-lib palindrome)
 <conv_test.*>: ppx-driver(ppx_inline_test -inline-test-lib conv)
+<capitalize_test.*>: ppx-driver(ppx_inline_test -inline-test-lib capitalize)
