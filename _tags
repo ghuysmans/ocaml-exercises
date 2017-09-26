@@ -4,3 +4,4 @@
 <palindrome_test.*>: ppx-driver(ppx_inline_test -inline-test-lib palindrome)
 <conv_test.*>: ppx-driver(ppx_inline_test -inline-test-lib conv)
 <capitalize_test.*>: ppx-driver(ppx_inline_test -inline-test-lib capitalize)
+<wordcount_test.*>: ppx-driver(ppx_inline_test -inline-test-lib wordcount)
