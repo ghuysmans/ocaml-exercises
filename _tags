@@ -1,3 +1,4 @@
+".opam": -traverse
 <*_test.*>: predicate(custom_ppx), package(ppx_inline_test)
 
 <french_test.*>: ppx-driver(ppx_inline_test -inline-test-lib french)
