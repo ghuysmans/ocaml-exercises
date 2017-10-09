@@ -4,15 +4,15 @@ if [ -z "$1" ]; then
 	exit 1
 fi
 
-if [ "$1" = "--user" -a -n "$2" ]; then
-	git clone `pwd` ~/ex
+if [ "$1" = "--user" -a -n "$2" -a -n "$3" ]; then
+	git clone "$2" ~/ex
 	cd
 	mv -f ex/* ex/.* .
 	rmdir ex
-	ln -s "$2" . #opam
+	ln -s "$3" . #opam
 	yes |opam init
 else
 	sudo -v && export SUDO=sudo || export SUDO="echo sudo"
 	$SUDO adduser $1 ocaml
-	$SUDO -u $1 `pwd`/$0 --user ~/.opam
+	$SUDO -u $1 `pwd`/$0 --user `pwd` ~/.opam
 fi
