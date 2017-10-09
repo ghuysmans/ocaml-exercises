@@ -4,12 +4,14 @@ if [ -z "$1" ]; then
 	exit 1
 fi
 
-if [ "$1" = "--user" ]; then
+if [ "$1" = "--user" -a -n "$2" ]; then
 	git clone `pwd` ~/ex
 	cd
 	mv -f ex/* ex/.* .
 	rmdir ex
+	ln -s "$2" . #opam
+	opam init -y
 else
 	sudo adduser $1 ocaml
-	sudo -u $1 `pwd`/$0 --user
+	sudo -u $1 `pwd`/$0 --user `pwd`/.opam
 fi
