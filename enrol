@@ -12,6 +12,7 @@ if [ "$1" = "--user" -a -n "$2" ]; then
 	ln -s "$2" . #opam
 	opam init -y
 else
-	sudo adduser $1 ocaml
-	sudo -u $1 `pwd`/$0 --user ~/.opam
+	sudo -v && export SUDO=sudo || export SUDO="echo sudo"
+	$SUDO adduser $1 ocaml
+	$SUDO -u $1 `pwd`/$0 --user ~/.opam
 fi

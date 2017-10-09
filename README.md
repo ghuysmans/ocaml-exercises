@@ -14,7 +14,8 @@ wget https://raw.githubusercontent.com/ghuysmans/ocaml-exercises/master/mono.sh
 
 ### Shared .opam
 1) Create an `ocaml` user who will manage packages.
-   On Debian, `sudo adduser --disabled-password ocaml`.
+   On Debian, `sudo adduser ocaml`. You may give him sudo privileges, but
+   without them, the enrolment script will tell you what to execute.
 2) Log in as him (`su ocaml`) and follow the _Individual user_ procedure.
 3) `sudo chmod g+w /home/ocaml/.opam/log`
 4) Move into the repository (`cd ex`), `git commit` whatever you want...
