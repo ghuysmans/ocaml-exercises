@@ -13,5 +13,5 @@ if [ "$1" = "--user" -a -n "$2" ]; then
 	opam init -y
 else
 	sudo adduser $1 ocaml
-	sudo -u $1 `pwd`/$0 --user `pwd`/.opam
+	sudo -u $1 `pwd`/$0 --user ~/.opam
 fi
