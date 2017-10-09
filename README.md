@@ -1,14 +1,25 @@
 # OCaml Exercises
 
 ## Setup
-
+You'll need the OCaml package manager:
 ```shell
-opam switch 4.03.0 #let's use the same compiler
-rm ~/.opam/4.03.0/lib/ocaml/compiler-libs/topdirs.cmi #FIXME?
-eval `opam config env`
-opam install ppx_inline_test.113.33.00+4.03 #FIXME
-git clone https://github.com/ghuysmans/ocaml-exercises.git ocaml
+sudo apt install opam
 ```
+
+### Individual user
+```shell
+wget https://raw.githubusercontent.com/ghuysmans/ocaml-exercises/master/mono.sh
+. mono.sh
+```
+
+### Shared .opam
+1) Create an `ocaml` user who will manage packages.
+   On Debian, `sudo adduser --disabled-password ocaml`.
+2) Log in as him (`su ocaml`) and follow the _Individual user_ procedure.
+3) `sudo chmod g+w /home/ocaml/.opam/log`
+4) Move into the repository (`cd ocaml`), `git commit` whatever you want...
+4) For each user $u, `./enrol $u`
+5) Update their repository with the usual `git pull` command.
 
 ## Organization
 

@@ -1,0 +1,15 @@
+#!/bin/sh
+if [ -z "$1" ]; then
+	echo usage: $0 user 2>&1
+	exit 1
+fi
+
+if [ "$1" = "--user" ]; then
+	git clone `pwd` ~/ex
+	cd
+	mv ex/* ex/.* .
+	rmdir ex
+else
+	sudo adduser $1 ocaml
+	sudo -u $1 `pwd`/$0 --user
+fi
