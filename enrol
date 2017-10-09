@@ -7,7 +7,7 @@ fi
 if [ "$1" = "--user" ]; then
 	git clone `pwd` ~/ex
 	cd
-	mv ex/* ex/.* .
+	mv -f ex/* ex/.* .
 	rmdir ex
 else
 	sudo adduser $1 ocaml
