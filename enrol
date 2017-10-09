@@ -10,7 +10,7 @@ if [ "$1" = "--user" -a -n "$2" ]; then
 	mv -f ex/* ex/.* .
 	rmdir ex
 	ln -s "$2" . #opam
-	opam init -y
+	yes |opam init
 else
 	sudo -v && export SUDO=sudo || export SUDO="echo sudo"
 	$SUDO adduser $1 ocaml
