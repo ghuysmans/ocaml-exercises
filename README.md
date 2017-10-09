@@ -17,7 +17,7 @@ wget https://raw.githubusercontent.com/ghuysmans/ocaml-exercises/master/mono.sh
    On Debian, `sudo adduser --disabled-password ocaml`.
 2) Log in as him (`su ocaml`) and follow the _Individual user_ procedure.
 3) `sudo chmod g+w /home/ocaml/.opam/log`
-4) Move into the repository (`cd ocaml`), `git commit` whatever you want...
+4) Move into the repository (`cd ex`), `git commit` whatever you want...
 4) For each user $u, `./enrol $u`
 5) Update their repository with the usual `git pull` command.
 
