@@ -7,3 +7,4 @@
 <capitalize_test.*>: ppx-driver(ppx_inline_test -inline-test-lib capitalize)
 <wordcount_test.*>: ppx-driver(ppx_inline_test -inline-test-lib wordcount)
 <rope_test.*>: ppx-driver(ppx_inline_test -inline-test-lib rope)
+<mult_test.*>: ppx-driver(ppx_inline_test -inline-test-lib mult)
