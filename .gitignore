@@ -18,3 +18,9 @@
 _build/
 
 participants.txt
+
+.bash*
+.gitconfig
+.ocamlinit
+.opam
+.profile
