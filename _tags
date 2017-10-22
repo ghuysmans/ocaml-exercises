@@ -10,3 +10,4 @@
 <mult_test.*>: ppx-driver(ppx_inline_test -inline-test-lib mult)
 <findch_test.*>: ppx-driver(ppx_inline_test -inline-test-lib findch)
 <duration1_test.*>: ppx-driver(ppx_inline_test -inline-test-lib duration1)
+<caesar_test.*>: ppx-driver(ppx_inline_test -inline-test-lib caesar)
