@@ -14,13 +14,7 @@
 
 *.vrb
 
-*.byte
 _build/
+**/.merlin
 
 participants.txt
-
-.bash*
-.gitconfig
-.ocamlinit
-.opam
-.profile
